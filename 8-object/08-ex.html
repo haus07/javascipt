@@ -1,0 +1,51 @@
+<script>
+    console.log('-1-');
+    const basketball = {
+        name:'basketball',
+        price: 2095
+    };
+
+    console.log(basketball);
+
+    console.log('-2-');
+    basketball.price = 500;
+    console.log(basketball);
+
+    console.log('-3-');
+
+    basketball['delivery-time'] = "3 days";
+    console.log(basketball);
+
+    console.log('-4-');
+
+    const football = {
+        name:'football',
+        price: 1090
+    }
+
+    function CompareBetween2Objects(object1,object2)
+    {
+        if(object1.price>object2.price) {
+            console.log(`${object1.name} has more expensive price`  )
+        }
+        else if (object1.price<object2.price) {
+            console.log(`${object2.name} has more expensive price`)
+        }
+    };
+
+    CompareBetween2Objects(basketball,football);
+
+    console.log('-5-');
+
+    function isSameProduct(product1,product2) {
+        if(product1.name === product2.name && product1.price === product2.price) {
+            console.log(`${product1.name} has the same values with ${product2.name}`);
+        }
+        else {
+            console.log(`${product1.name} not the same values with ${product2.name} `)
+        }
+        
+    }
+
+    isSameProduct(basketball,football)
+</script>
