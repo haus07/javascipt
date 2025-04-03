@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdvancedFunction</title>
+</head>
+<body>
+    <button class="btn" onclick="setTime()">Add top cart</button>
+    <p class="message"></p>
+    <script>
+    const button = document.querySelector('.btn');
+    const message = document.querySelector('.message');
+    let timeOutID;
+    button.addEventListener('click',function(){
+        message.innerHTML = 'Added';
+        if(timeOutID){
+            clearTimeout(timeOutID);
+        }
+        timeOutID = setTimeout(function(){
+            message.innerHTML='';
+          
+        },3000);
+        
+    })
+    </script>
+</body>
+</html>
