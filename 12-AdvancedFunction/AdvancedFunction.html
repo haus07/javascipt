@@ -6,23 +6,58 @@
     <title>AdvancedFunction</title>
 </head>
 <body>
-    <button class="btn" onclick="setTime()">Add top cart</button>
-    <p class="message"></p>
+        <!-- <button class="btn" onclick="setTime()">Add top cart</button>
+        <p class="message"></p>
+        <script>
+        const button = document.querySelector('.btn');
+        const message = document.querySelector('.message');
+        let timeOutID;
+        button.addEventListener('click',function(){
+            message.innerHTML = 'Added';
+            if(timeOutID){
+                clearTimeout(timeOutID);
+            }
+            timeOutID = setTimeout(function(){
+                message.innerHTML='';
+            
+            },3000);
+            
+        })
+        </script> -->
+    <!-- <button class="add">Add</button>
+    <button class="remove">Remove</button>
     <script>
-    const button = document.querySelector('.btn');
-    const message = document.querySelector('.message');
-    let timeOutID;
-    button.addEventListener('click',function(){
-        message.innerHTML = 'Added';
-        if(timeOutID){
-            clearTimeout(timeOutID);
-        }
-        timeOutID = setTimeout(function(){
-            message.innerHTML='';
-          
-        },3000);
-        
-    })
+        const title = document.querySelector('title');
+        let i = 0;
+        const add = document.querySelector('.add');
+        const remove = document.querySelector('.remove');
+        const displayTitle = function(){
+            title.innerHTML = `(${i}) New messages `;  
+        };
+        add.addEventListener('click',function(){
+            i++;
+            displayTitle();
+        });
+        remove.addEventListener('click',function(){
+            i--;
+            if(i<=0){
+                title.innerHTML = 'App';
+            }
+            else{
+
+                displayTitle();
+            }
+        });
+
+    </script> -->
+    <script>
+    const myArray = ['egg','ham','apple','egg','egg','banana'];
+    const removeEgg = (myArray) =>{
+         return myArray.filter((value,index,self)=> {
+            return self.indexOf(value) === index;    
+        });
+    };
+    console.log(removeEgg(myArray));
     </script>
 </body>
 </html>
